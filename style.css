@@ -1,0 +1,150 @@
+@import url("./assets/font/fonts.css");
+*,*::after,*::before{
+ box-sizing: border-box ;
+ margin: 0;
+ padding: 0;
+ list-style: none;
+ 
+}
+:root{
+    --white-color :#fff;
+    --main-black:#222;
+    --main-spacing :0.1rem;
+    --main-transition: all 0.3s linear;
+    --main-red:#db2777;
+    --primary-color:#041442;
+    --secondary-color :#ff8e00;
+    --light-secondary-color:#ffa538;
+    --main-gray :#7c7c7c;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    background:var(--primary-color);
+    color:var(--main-black);
+}
+header{
+    min-height: 20vh;
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+   
+}
+.form-container{
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+form{
+    width: 25rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+form input{
+   
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+form input,form button{
+    border: none;
+    outline: none;
+    background: var(--white-color);
+    padding: 0.5rem;
+    font-size: 1.4rem;    
+}
+form button{
+    cursor: pointer;
+    
+}
+button:hover{
+
+    transition:var(--main-transition);
+    
+}
+
+.add-btn{
+    color: var(--secondary-color);
+}
+.add-btn:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+select{
+    color: var(--secondary-color);
+    appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding:  0.7rem;
+    
+}
+.select{
+    width: 13rem;
+    position: relative;
+    cursor: pointer;
+    margin-left:1rem;
+    background-color: var(--white-color);
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    color: var(--secondary-color);
+    pointer-events: none;
+}
+
+.todo-container {
+    width:25rem;
+}
+.todo{
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--light-secondary-color);
+    margin-top: 1rem;
+    padding:0 0.2rem;
+    transition: var(--main-transition);
+}
+.todo li{
+    flex: 1;
+    padding-left: 0.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.todo span{
+    display: block;
+   margin: 0 0.3rem;
+    cursor: pointer;
+}
+
+.fa-circle-check{
+    color: green;
+}
+
+.fa-trash-can{
+    color: red;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
